@@ -41,7 +41,7 @@ class Home extends BaseController
         $data['titulo'] ='Tractores Pauny 🚜 - Login';
         echo view('front/head_view', $data);
         echo view('front/navbar_view');
-        echo view('front/login');
+        echo view('back/usuario/login');
         echo view('front/footer_view');
     }
 

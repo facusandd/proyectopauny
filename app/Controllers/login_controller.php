@@ -46,23 +46,24 @@ class login_controller extends BaseController
                 ];
                     $session->set($ses_data);
 
-                    session()->setFlashdata('msg', 'Bienvenido');
+                    $session->setFlashdata('msg', 'Bienvenido a Tractores Pauny');
                     return redirect()->to('/panel');
             }
             else{
                 $session->setFlashdata('msg', 'Contraseña incorrecta');
                 return redirect()->to('/login_controller');
-            }else{
-                $session->setFlashdata('msg', 'No existe el mail o es incorrecto');
-                return redirect()->to('/login_controller');    
+            }
+        } 
+        else{
+            $session->setFlashdata('msg', 'No existe el mail o es incorrecto');
+            return redirect()->to('/login_controller');    
             }
         }
-    }
 
     public function logout(){
         $session = session();
         $session->destroy();
-        return redirect->to('/');
+        return redirect()->to('/');
     }
 
 }
