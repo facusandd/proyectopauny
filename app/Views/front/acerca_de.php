@@ -50,4 +50,4 @@
           </p>
       </div>
     </div>
-<img src="assets/img/pauny">
+<a><img src="assets/img/pauny.png" class="img-fluid mx-auto d-block"></a>
